@@ -1,7 +1,7 @@
 class Argument:
     def __init__(self):
         from argparse import ArgumentParser
-        argument_parser = ArgumentParser(f'python3 {__file__}')
+        argument_parser = ArgumentParser('python3 webPathScanner')
         # argument for url
         argument_parser.add_argument('url', action='store', help='url of the victim')
         # argument for wordlists path
