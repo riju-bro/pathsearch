@@ -29,9 +29,9 @@ def __main__():
 def dirsearch(paths):
     from requests import get
     for path in paths:
-        r = get(f'{url}/{path}', allow_redirects=False)
+        r = get(f'{url}/{path.strip()}', allow_redirects=False)
         if r.status_code != 404:
-            print(f'/{path}\t{r.status_code}')
+            print(f'/{path.strip()}\t{r.status_code}')
 
 
 if __name__ == '__main__':
