@@ -7,5 +7,5 @@ class Argument:
         # argument for wordlists path
         argument_parser.add_argument('-w', '--wordlist', action='store', help='wordlists path', required=True)
         # argument for thread count
-        argument_parser.add_argument('-t', '--thread', action='store', help='number of threads')
+        argument_parser.add_argument('-t', '--thread', action='store', help='number of threads', type=int)
         self.args = argument_parser.parse_args()
