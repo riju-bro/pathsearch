@@ -17,11 +17,11 @@ def __main__():
     paths = wordlist.readlines()
     j = 0  # start index
     diff = int(len(paths)/thread)
-    for i in range(diff, len(paths), diff):
+    for i in range(diff, len(paths)+1, diff):
         t = Thread(target=dirsearch, args=(paths[j:i], ))
         t.start()
         j = i
-    if i != len(paths) - 1:
+    if i != len(paths):
         t = Thread(target=dirsearch, args=(paths[j:len(paths)], ))
         t.start()
 
