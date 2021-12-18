@@ -1,5 +1,6 @@
 # pathsearch
-Multithreaded web brute-forcing tool in Python.
-it is just a basic python script.
-anyone can contribute to it
-
+Multithreaded web brute-forcing tool.
+it is just a basic python script using requests module.
+anyone can contribute to it.
+# requirement (IMPORTANT)
+requests module
