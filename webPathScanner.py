@@ -14,7 +14,7 @@ def __main__():
         print('The wordlist does not exist')
         exit(-1)
     wordlist = open(args.wordlist, 'r')
-    paths = wordlist.readlines()
+    paths = wordlist.read().splitlines()
     j = 0  # start index
     diff = int(len(paths)/thread)
     for i in range(diff, len(paths)+1, diff):
@@ -29,9 +29,9 @@ def __main__():
 def dirsearch(paths):
     from requests import get
     for path in paths:
-        r = get(f'{url}/{path.strip()}', allow_redirects=False)
+        r = get(f'{url}/{path}', allow_redirects=False)
         if r.status_code != 404:
-            print(f'/{path.strip()}\t{r.status_code}')
+            print(f'/{path}\t{r.status_code}')
 
 
 if __name__ == '__main__':
